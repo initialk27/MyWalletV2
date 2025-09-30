@@ -36,14 +36,17 @@ function loadData() {
     const card = document.createElement('div');
     card.className = 'card';
 
-    card.innerHTML = `
-      <h3>${item.kategori} (Rp ${total.toLocaleString('id-ID')})</h3>
-      <div class="progress-wrapper">
-        <div class="progress-container">
-          <div class="progress-bar" style="width: ${persenBar}%;"></div>
-        </div>
-        <div class="percentage">${persenTampil}%</div>
-      </div>
+        card.innerHTML = `
+  <h3>${item.kategori} (Rp ${total.toLocaleString('id-ID')})</h3>
+  <p class="maks-text">Maks yang dikeluarkan Rp ${item.maksimal.toLocaleString(
+    'id-ID'
+  )}</p>
+  <div class="progress-wrapper">
+    <div class="progress-container">
+      <div class="progress-bar" style="width: ${persenBar}%;"></div>
+    </div>
+    <div class="percentage">${persenTampil}%</div>
+  </div>
 
       <!-- Tombol titik tiga -->
       <button class="menu-btn">⋮</button>
@@ -118,3 +121,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Panggil load pertama kali
   loadData();
 });
+
