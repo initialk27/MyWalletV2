@@ -9,11 +9,11 @@ body {
 
 /* Layout utama */
 body {
+  background-color: #1a1a1c;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 93dvh; /* pastikan selalu penuh, aman di HP */
-  background: #f5f7fa;
 }
 /* Box form */
 .container {
@@ -22,7 +22,7 @@ body {
   max-width: 300px;
   padding: 35px 28px;
   box-sizing: border-box;
-  background: #ffffff;
+  background: #000000;
   border-radius: 18px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
@@ -34,7 +34,7 @@ body {
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: 700;
-  color: #000000;
+  color: #ffffff;
 }
 
 /* Form group */
@@ -48,14 +48,16 @@ body {
 .form-group label {
   font-size: 15px;
   margin-bottom: 6px;
-  color: #555;
+  color: #ffffff;
   font-weight: 500;
 }
 
 .form-group input {
+  color: white;
+  background-color: #1a1a1c;
   width: 100%;
   padding: 12px 14px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #434343;
   border-radius: 10px;
   font-size: 15px;
   outline: none;
@@ -63,8 +65,8 @@ body {
 }
 
 .form-group input:focus {
-  border-color: #03f5f7;
-  box-shadow: 0 0 6px rgba(3, 245, 247, 0.4);
+  border-color: #444444;
+  box-shadow: 0 0 6px rgba(110, 110, 110, 0.4);
 }
 
 /* Tombol group */
