@@ -356,6 +356,12 @@ body {
 }
 /* Animasi fade in */
 
+.maks-text {
+  font-size: 13px;
+  color: #3e3e3e; /* abu-abu */
+  margin: 4px 0 10px 0;
+}
+
 #wallet-container {
   flex: 0 0 20%; /* tepat 20% layar */
   display: flex;
@@ -413,3 +419,4 @@ body {
     opacity: 1;
   }
 }
+
