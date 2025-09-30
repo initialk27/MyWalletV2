@@ -1,0 +1,263 @@
+/* Reset dasar */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto Mono', monospace; /* ganti ke Roboto Mono */
+  background: #000000;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 🚫 hilangkan scroll */
+}
+
+/* Container utama (80%) */
+.container {
+  background-color: black;
+  flex: 0 0 80%; /* Tinggi 80% */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* overflow-y: auto; ❌ dihapus supaya tidak muncul scroll */
+}
+
+/* Judul */
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+#tanggal {
+  max-width: 300px;
+}
+
+#nominal {
+  max-width: 300px;
+}
+
+#kategori {
+  max-width: 325px;
+}
+
+/* Form group */
+/* Form Group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #1a1a1c;
+  border: 1.5px solid #363636;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #494949;
+  box-shadow: 0 0 0 2px rgba(9, 132, 227, 0.15);
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #3a3a3a;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+  background-color: #1a1a1c;
+  color: white; /* biar konsisten */
+  appearance: none; /* hilangkan gaya default browser */
+}
+
+.form-group select:focus {
+  border-color: #454545;
+  box-shadow: 0 0 0 2px rgba(9, 132, 227, 0.15);
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.25s ease;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek glow */
+.button-group button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(25deg);
+  transition: 0.5s;
+}
+
+/* Tombol kembali */
+#btn-kembali {
+  background: #f70305;
+}
+#btn-kembali:hover {
+  background: #c10203;
+}
+
+/* Tombol lanjut (simpan) */
+/* Tombol simpan */
+#btn-simpan {
+  background: #00d0ff;
+}
+
+#btn-simpan:hover {
+  background: #00a6cb;
+}
+
+/* Button Group */
+/* .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+} */
+
+/* .button-group button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+} */
+
+/* Tombol kembali */
+/* #btn-kembali {
+  background: #636e72;
+  color: white;
+  margin-right: 10px;
+}
+
+#btn-kembali:hover {
+  background: #2d3436;
+} */
+
+/* Tombol lanjut (simpan) */
+/* #btn-lanjut {
+  background: #00b894;
+  color: white;
+  margin-left: 10px;
+}
+
+#btn-lanjut:hover {
+  background: #55efc4;
+} */
+
+/* Wallet container (20%) */
+#wallet-container {
+  flex: 0 0 20%; /* tepat 20% layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #403f3f;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(138, 138, 138, 0.1);
+}
+
+/* Baris isi wallet (teks kiri + tombol kanan) */
+#wallet-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* biar tombol dorong ke kanan */
+}
+
+/* Teks wallet */
+#wallet-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Tombol kanan */
+#wallet-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#wallet-buttons button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00d0ff;
+  color: white;
+}
+
+#wallet-buttons button:hover {
+  background: #00a6cb;
+}
+
+body {
+  animation: fadeIn 0.5s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

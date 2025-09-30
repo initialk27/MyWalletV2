@@ -1,0 +1,190 @@
+/* Reset dasar */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto Mono', monospace;
+  background: #000000;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container utama (80%) */
+.container {
+  background-color: black;
+  flex: 0 0 80%; /* Tinggi 80% */
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: white;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #3c3c3c;
+  background-color: #1a1a1c;
+  color: white;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #1a1a1c;
+  /* biar tidak transparan */
+  background-image: none; /* pastikan tidak ada ikon default */
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  border-color: #383838;
+  box-shadow: 0 0 5px rgba(52, 52, 52, 0.4);
+}
+
+/* Tombol */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#maksimal {
+  max-width: 300px;
+}
+
+#kategori {
+  max-width: 325px;
+}
+
+/* Tombol kembali */
+#backBtn {
+  background: #f70305;
+  color: white;
+}
+#backBtn:hover {
+  background: #c10203;
+}
+
+/* Tombol lanjut */
+#nextBtn {
+  background: #00d0ff;
+  color: white;
+  font-weight: 500;
+}
+#nextBtn:hover {
+  background: #00a6cb;
+}
+
+/* Wallet container (20%) */
+#wallet-container {
+  flex: 0 0 20%; /* tepat 20% layar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #403f3f;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(138, 138, 138, 0.1);
+}
+
+/* Baris isi wallet */
+#wallet-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Teks wallet */
+#wallet-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Tombol wallet */
+#wallet-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#wallet-buttons button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #00d0ff;
+  color: white;
+}
+
+#wallet-buttons button:hover {
+  background: #00a6cb;
+}
+
+/* Animasi */
+body {
+  animation: fadeIn 0.5s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,134 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* penuh layar */
+  font-family: 'Roboto Mono', monospace; /* ganti ke Roboto Mono */
+  color: #333;
+}
+
+/* Layout utama */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 93dvh; /* pastikan selalu penuh, aman di HP */
+  background: #f5f7fa;
+}
+/* Box form */
+.container {
+  flex: 0 0 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  /*hanyascrollatas-bawah*/
+  overflow-x: hidden;
+  /*hilangkanscrollkiri-kanan*/
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0 0 12px 12px;
+  -moz-border-radius: 0 0 12px 12px;
+  -ms-border-radius: 0 0 12px 12px;
+  -o-border-radius: 0 0 12px 12px;
+}
+
+/* Judul */
+.container h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000; /* merah biar beda dari tambah saldo */
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #ff4b5c;
+  box-shadow: 0 0 6px rgba(255, 75, 92, 0.4);
+}
+
+/* Tombol group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.button-group button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#nominal {
+  max-width: 220px;
+}
+
+/* Tombol kembali */
+#btn-kembali {
+  background: #f70305;
+  color: #fff;
+  font-weight: 600;
+}
+#btn-kembali:hover {
+  background: #c10203;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(193, 2, 3, 0.4);
+}
+
+/* Tombol simpan */
+#btn-simpan {
+  background: #00d0ff;
+  color: #fff;
+  font-weight: 600;
+}
+#btn-simpan:hover {
+  background: #03c4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(3, 196, 255, 0.4);
+}
+
+/* Animasi masuk */
+body {
+  animation: fadeIn 0.5s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
