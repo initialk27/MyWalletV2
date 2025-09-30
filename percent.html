@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persentase Pengeluaran</title>
+    <link rel="stylesheet" href="styling/percent.css" />
+  </head>
+  <body>
+    <h2 class="myh2">Persentase Pengeluaran</h2>
+    <div class="container">
+      <div id="list-container">
+        <!-- Contoh card -->
+        <div class="card">
+          <h3>Makanan (Rp 500.000)</h3>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 70%"></div>
+          </div>
+          <div class="percentage">70%</div>
+
+          <!-- Tombol titik tiga -->
+          <button class="menu-btn">⋮</button>
+
+          <!-- Dropdown menu -->
+          <div class="dropdown">
+            <button class="edit-btn">Edit</button>
+            <button class="hapus-btn">Hapus</button>
+          </div>
+        </div>
+        <!-- End contoh card -->
+      </div>
+
+      <button
+        id="btn-tambah-pengeluaran"
+        class="tambah"
+        onclick="window.location.href='addpercent.html'"
+      >
+        ＋
+      </button>
+      <button
+        id="btn-kembali"
+        class="kembali"
+        onclick="window.location.href='pengeluaran.html'"
+      >
+        ←
+      </button>
+    </div>
+
+    <!-- Modal Konfirmasi -->
+    <div id="confirm-modal" class="modal">
+      <div class="modal-box">
+        <p>Yakin ingin menghapus catatan ini?</p>
+        <div class="modal-actions">
+          <button id="confirm-yes">✔️</button>
+          <button id="confirm-no">❌</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="wallet-container">
+      <div id="wallet-content">
+        <span id="wallet-text"
+          >Wallet: <span id="wallet-saldo">Rp 0</span></span
+        >
+        <div id="wallet-buttons">
+          <button id="wallet-minus">−</button>
+          <button id="wallet-plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripting/percent.js"></script>
+    <script src="wallet.js"></script>
+  </body>
+</html>

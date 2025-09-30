@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurangi Wallet</title>
+    <link rel="stylesheet" href="styling/kurangiWallet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Kurangi Saldo Wallet</h2>
+
+      <div class="form-group">
+        <label for="nominal">Nominal (Rp)</label>
+        <input type="text" id="nominal" placeholder="" />
+      </div>
+
+      <div class="button-group">
+        <button id="btn-kembali">←</button>
+        <button id="btn-simpan">✔️</button>
+      </div>
+    </div>
+
+    <script>
+      function getWalletAwal() {
+        return parseInt(localStorage.getItem('walletSaldoAwal')) || 0;
+      }
+      function setWalletAwal(nominal) {
+        localStorage.setItem('walletSaldoAwal', nominal);
+      }
+
+      // Format input ke Rupiah
+      const nominalInput = document.getElementById('nominal');
+      nominalInput.addEventListener('input', function (e) {
+        let value = e.target.value.replace(/[^\d]/g, '');
+        e.target.value = formatRupiah(value);
+      });
+
+      function formatRupiah(angka) {
+        return angka.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+
+      document.getElementById('btn-kembali').addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+
+      document.getElementById('btn-simpan').addEventListener('click', () => {
+        const nominalStr = document
+          .getElementById('nominal')
+          .value.replace(/\./g, '');
+        const nominal = parseInt(nominalStr);
+
+        if (isNaN(nominal) || nominal <= 0) {
+          alert('Masukkan nominal yang valid!');
+          return;
+        }
+
+        const saldoSekarang = getWalletAwal();
+        if (nominal > saldoSekarang) {
+          alert('Nominal lebih besar dari saldo saat ini!');
+          return;
+        }
+
+        const saldoBaru = saldoSekarang - nominal;
+        setWalletAwal(saldoBaru);
+        alert('Saldo berhasil dikurangi!');
+        window.location.href = 'index.html';
+      });
+    </script>
+  </body>
+</html>
+

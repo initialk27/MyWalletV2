@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetapkan Persen</title>
+    <link rel="stylesheet" href="styling/addpercent.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tetapkan Maksimal Pengeluaran</h2>
+
+      <div class="form-group">
+        <label for="kategori">Kategori</label>
+        <select id="kategori">
+          <option value="">-- Pilih Kategori --</option>
+          <option value="makan">Makan</option>
+          <option value="laundry">Laundry</option>
+          <option value="beras">Beras</option>
+          <option value="air">Air</option>
+          <option value="belanja">Belanja / Shopping</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="maksimal">Tetapkan Maksimal (Rp)</label>
+        <input type="text" id="maksimal" placeholder="" />
+      </div>
+
+      <div class="buttons">
+        <button class="back-btn" id="backBtn">←</button>
+        <button class="next-btn" id="nextBtn">→</button>
+      </div>
+    </div>
+
+    <div id="wallet-container">
+      <div id="wallet-content">
+        <span id="wallet-text">
+          Wallet: <span id="wallet-saldo">Rp 0</span>
+        </span>
+        <div id="wallet-buttons">
+          <button id="wallet-minus">−</button>
+          <button id="wallet-plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripting/addpercent.js"></script>
+    <script src="wallet.js"></script>
+  </body>
+</html>

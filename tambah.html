@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Bulan</title>
+    <link rel="stylesheet" href="styling/tambah.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tambah Bulan & Tahun</h2>
+
+      <div class="form-group">
+        <label for="bulan">Bulan</label>
+        <select id="bulan">
+          <option value="">-- Pilih Bulan --</option>
+          <option value="Januari">Januari</option>
+          <option value="Februari">Februari</option>
+          <option value="Maret">Maret</option>
+          <option value="April">April</option>
+          <option value="Mei">Mei</option>
+          <option value="Juni">Juni</option>
+          <option value="Juli">Juli</option>
+          <option value="Agustus">Agustus</option>
+          <option value="September">September</option>
+          <option value="Oktober">Oktober</option>
+          <option value="November">November</option>
+          <option value="Desember">Desember</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tahun">Tahun</label>
+        <select id="tahun">
+          <option value="">-- Pilih Tahun --</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button id="batal-btn">←</button>
+        <button id="lanjut-btn">→</button>
+      </div>
+    </div>
+
+    <!-- Modal Peringatan -->
+    <!-- Modal Peringatan -->
+    <div id="warning-modal" style="display: none">
+      <div id="warning-box">
+        <p id="warning-message"></p>
+        <button id="warning-ok">OK</button>
+      </div>
+    </div>
+
+    <div id="wallet-container">
+      <div id="wallet-content">
+        <span id="wallet-text"
+          >Wallet: <span id="wallet-saldo">Rp 0</span></span
+        >
+        <div id="wallet-buttons">
+          <button id="wallet-minus">−</button>
+          <button id="wallet-plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripting/tambah.js"></script>
+    <script src="wallet.js"></script>
+  </body>
+</html>

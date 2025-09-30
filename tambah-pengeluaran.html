@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Pengeluaran</title>
+    <link rel="stylesheet" href="styling/tambah-pengeluaran.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Tambah Pengeluaran</h2>
+
+      <div class="form-group">
+        <label for="tanggal">Tanggal</label>
+        <input type="date" id="tanggal" />
+      </div>
+
+      <div class="form-group">
+        <label for="nominal">Nominal (Rp)</label>
+        <input type="text" id="nominal" placeholder="" />
+      </div>
+
+      <div class="form-group">
+        <label for="kategori">Kategori</label>
+        <select id="kategori">
+          <option value="">-- Pilih Kategori --</option>
+          <option value="makan">Makan</option>
+          <option value="laundry">Laundry</option>
+          <option value="beras">Beras</option>
+          <option value="air">Air</option>
+          <option value="belanja">Belanja / Shopping</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button id="btn-kembali">←</button>
+        <button id="btn-lanjut">→</button>
+      </div>
+    </div>
+
+    <div id="wallet-container">
+      <div id="wallet-content">
+        <span id="wallet-text"
+          >Wallet: <span id="wallet-saldo">Rp 0</span></span
+        >
+        <div id="wallet-buttons">
+          <button id="wallet-minus">−</button>
+          <button id="wallet-plus">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripting/tambah-pengeluaran.js"></script>
+    <script src="wallet.js"></script>
+  </body>
+</html>
